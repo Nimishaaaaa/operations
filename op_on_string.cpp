@@ -4,12 +4,12 @@ using namespace std;
 // Function to find length of a string
 int stringLen(string str)
 {
-    int i = 0;
-    while (str[i] != '\0')
+    int p = 0;
+    while (str[p] != '\0')
     {
-        i++;
+        p++;
     }
-    return i;
+    return p;
 }
 
 // Function to concatenate two strings
@@ -22,15 +22,15 @@ void stringCat(string str1, string str2)
 // Function to reverse a string
 void stringRev(string str)
 {
-    int len = 0, n;
+    int length = 0, n;
     char temp;
-    len = stringLen(str);
-    n = len - 1;
+    length = stringLen(str);
+    n = length - 1;
 
-    for(int i = 0; i <= len/2; i++)
+    for(int p = 0; p <= length/2; p++)
     {
-        temp = str[i];
-        str[i] = str[n];
+        temp = str[p];
+        str[p] = str[n];
         str[n] = temp;
         n--;
     }
@@ -46,13 +46,13 @@ void stringCopy(string &str1, string str2)
 
 int main()
 {
-    string str1 = "Hello", str2 = "World";
+    string str1 = "Alexa", str2 = "happy";
     string str;
         
     stringCopy(str, str1);
 
-    int len = stringLen(str);
-    cout<<"Length of "<<str<<" is: "<<len<<endl;
+    int length = stringLen(str);
+    cout<<"Length of "<<str<<" is: "<<length<<endl;
     
     stringRev(str);
 
@@ -61,3 +61,4 @@ int main()
 
     return 0;
 }
+
